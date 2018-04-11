@@ -77,6 +77,26 @@
                             <button class="col button button-big button-fill">Events</button>
                             <button class="col button button-big button-fill">Contact</button>
                             <a href="contactPage.html" class="col button button-big button-fill">SGA Contacts</a><br>
+
+                            <h3>Announcements</h3>
+                            <table border=1>
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Date</th>
+                                        <th>Text</th>
+                                    </tr>
+                                </thead>         
+
+                                    <c:forEach items="${specificAnnouncement}" var="announcement">
+                                        <tr>
+                                            <td><c:out value="${announcement.announcementTitle}" /></td>
+                                            <td><c:out value="${announcement.announcementDate}" /></td>
+                                            <td><c:out value="${announcement.announcementText}" /></td>
+                                        </tr>
+                                    </c:forEach>
+                            </table>
+
                             <!-- Link to another page -->
                             <a href="about.html">About app</a>
                         </div>
